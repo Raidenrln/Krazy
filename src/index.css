@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "Press Start 2P", monospace;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --bg: #14111c;
+  --bg-deep: #0b0910;
+  --panel: #1c1826;
+  --panel-raised: #241f31;
+  --border: #3a3350;
+  --border-light: #544a6e;
+  --violet: #a855f7;
+  --violet-dim: #4c2a72;
+  --gold: #f0ac3f;
+  --gold-dim: #7a5a22;
+  --redstone: #e6553d;
+  --lapis: #8b7cf6;
+  --text: #f0ecf7;
+  --text-muted: #a89bbd;
+  --text-dim: #6e5f85;
+}
+body {
+ background:
+    radial-gradient(ellipse 120% 80% at 50% -10%, #1a2530 0%, var(--bg) 45%, var(--bg-deep) 100%);
+ min-height:100vh;
+}
