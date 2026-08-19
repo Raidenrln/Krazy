@@ -6,11 +6,14 @@ import { HashRouter } from 'react-router-dom'
 import "@fontsource/inter";
 import "@fontsource/jetbrains-mono";
 import "@fontsource/press-start-2p";
+import { TotalPlayerProvider } from './context/TotalPlayersContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
    <StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <TotalPlayerProvider>
+      <HashRouter>
+       <App />
+      </HashRouter>
+    </TotalPlayerProvider>
   </StrictMode>,
 )
