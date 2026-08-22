@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, type CSSProperties } from "react";
-import { NavLink, type NavLinkRenderProps } from "react-router-dom";
+import { NavLink, useNavigate, type NavLinkRenderProps } from "react-router-dom";
 import {
   House,
   User,
@@ -32,7 +32,7 @@ const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const profileRef = useRef<HTMLDivElement>(null);
-
+  const navigate = useNavigate()
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (profileRef.current && !profileRef.current.contains(e.target as Node)) {
@@ -72,6 +72,8 @@ const Topbar = () => {
   const handleLogout = () => {
     console.log("logging out...");
     setProfileOpen(false);
+    navigate("/login")
+    localStorage.removeItem("token");
   };
 
   return (

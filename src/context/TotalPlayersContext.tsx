@@ -27,7 +27,7 @@ export const TotalPlayerProvider = ({ children }: { children: ReactNode }) => {
     const getPlayers = async () => {
       try {
         const response = await fetch(
-          "https://fruit-wizard-aluminium-relations.trycloudflare.com/api/server/players",
+          "https://spatial-drawings-board-profession.trycloudflare.com/api/server/players",
         );
 
         if (!response.ok) {
@@ -42,6 +42,7 @@ export const TotalPlayerProvider = ({ children }: { children: ReactNode }) => {
 
         setPlayers({
         online: data.online_players,
+        
         max: data.max_players,
         });
         console.log(data);
